@@ -1,0 +1,39 @@
+*{
+    font-family:Merriweater;
+}
+
+.Header{
+    width: 100%;
+    height:80px;
+    background-color: brown;
+    
+}
+
+.Header-child {
+    width: 23%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+
+}
+
+.Header-child > div {
+   width: auto;
+   height: 100%;
+   /* border: 1px solid green; */
+   font-size: xx-large;
+   
+}
+
+h2{
+    font-size: 25px;
+    padding: 3px;
+}
+
+.Header-child > div :hover {
+    height: 100%;
+    color:brown;
+    background-color: aliceblue;
+} 
