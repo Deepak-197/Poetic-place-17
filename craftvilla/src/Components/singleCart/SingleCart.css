@@ -1,0 +1,54 @@
+.single-image{
+    width: 100px;
+}
+.item-details{
+    display: flex;
+    width: 35%;
+
+}
+.item-details h3{
+
+text-align: left;    
+}
+.cart-details{
+    display: flex;
+    gap:5%;
+}
+.date{
+    margin-left: 2%;
+}
+.price{
+    margin-left: 5%;
+}
+.remove{
+    background-color: white;
+    border: 0px;
+}
+.remove:hover{
+    cursor: pointer;
+    color: brown;
+}
+.price-section{
+    display: flex;
+}
+.minus{
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid brown ;
+    background-color: white;
+}
+.add{
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid brown ;
+    
+    background-color: white;
+}
+.counter{
+    display: flex;
+    gap: 5px;
+}
+.counter p{
+    font-weight: bold;
+    font-size: larger;
+}
