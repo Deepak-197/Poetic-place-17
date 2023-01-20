@@ -339,25 +339,12 @@
   ],
   "cart": [
     {
-      "id": 48,
-      "image": "https://cdn.plotch.io/image/upload/w_301,h_301/C/V/PLOmKSKenF1670860817_6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b.jpg",
-      "name": "Designer RaFaKHa brand Ankle Length Dress with Flowers in Poly Crepe material for Women and Girls (White)",
+      "id": 47,
+      "image": "https://cdn.plotch.io/image/upload/w_301,h_301/C/V/PLOYOAKyM71670860816_6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b.jpg",
+      "name": "Designer RaFaKHa brand Ankle Length Dress with Flowers in Poly Crepe material for Women and Girls (Orange)",
       "price": "₹ 205",
-      "buy": "Add To Cart"
-    },
-    {
-      "id": 49,
-      "image": "https://cdn.plotch.io/image/upload/w_301,h_301/C/V/PLOxChhSj31670860876_6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b.jpg",
-      "name": "DESIGNER POLY CREPE KURTI FABRICS WITH FLORAL PRINTS",
-      "price": "₹ 205",
-      "buy": "Add To Cart"
-    },
-    {
-      "id": 50,
-      "image": "https://cdn.plotch.io/image/upload/w_301,h_301/C/V/PLOUGjCECP1670860876_6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b.jpg",
-      "name": "DESIGNER POLY CREPE KURTI FABRICS WITH FLORAL PRINTS",
-      "price": "₹ 205",
-      "buy": "Add To Cart"
+      "buy": "Add To Cart",
+      "count": 1
     }
   ]
 }
