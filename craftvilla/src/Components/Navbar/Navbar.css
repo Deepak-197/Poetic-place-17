@@ -10,11 +10,12 @@
     position: sticky;
     display: flex;
     border: 1px solid red;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .Navbar-Logo{
     height: 100%;
+    margin-left: 40px;
 }
 
 .search-bar{
@@ -32,4 +33,30 @@
     font-size: 15px;
     background-color: gainsboro;
     padding: 14px;
+}
+
+.sign-reg{
+    width: 25%;
+    height: 50%;
+    border: 1px solid blue;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    
+}
+
+.sign-reg > div{
+
+    /* text-align: center; */
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    /* padding: 2px; */
+}
+
+span{
+    font-size: 18px;
+    text-align: center;
+    margin:auto;
+    
 }
