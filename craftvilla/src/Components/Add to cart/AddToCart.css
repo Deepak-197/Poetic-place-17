@@ -45,6 +45,9 @@ margin: 50px 10px;
 .price-details{
     text-align: end;
 }
+ .div-button{
+    display: none;
+}
 @media screen and (min-width: 320px) and (max-width:750px){
     .data-header{
         display:none
@@ -64,11 +67,16 @@ margin: 50px 10px;
             display: none;
 
     }
-    .bottom-details ~ .div-button{
+    .div-button {
         display: block;
-        width: 100%;
         position: fixed;
-        top: 80%;
+        top: 90%;
+        width: 100%;
+        
+    }
+    .div-button .place-order-button{
+        
+        width: 100%;
     }
 
 }

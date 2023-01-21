@@ -29,8 +29,7 @@ const AddToCart = () => {
 
     return initial;
   }, 0);
-  
-  
+
   useEffect(() => {
     getData();
   }, []);
@@ -42,7 +41,7 @@ const AddToCart = () => {
           <h3>My Cart({data.length} items)</h3>
         </div>
         <div className="right-bar">
-          <h3>SubTotal:₹{totalPrice+50}</h3>
+          <h3>SubTotal:₹{totalPrice + 50}</h3>
           <div>
             <button className="place-order-button">Place Order</button>
           </div>
@@ -71,23 +70,24 @@ const AddToCart = () => {
 
       <div className="bottom-details">
         <div className="address-details">
-        <h3>Deliver To: </h3> <br/> 
-        <h3> Prince Patel </h3>
-        Bhavnagar,Gujarat
+          <h3>Deliver To: </h3> <br />
+          <h3> Prince Patel </h3>
+          Bhavnagar,Gujarat
         </div>
         <div className="price-details">
           <h3>Price Details</h3> <br />
-          <h3 style={{color:"#cccccc"}}>Price  ₹{totalPrice}</h3> 
-          <h3 style={{color:"#cccccc"}}>Shipping ₹50</h3> 
-          <h3>subTotal  ₹{totalPrice+50} </h3><br />
+          <h3 style={{ color: "#cccccc" }}>Price ₹{totalPrice}</h3>
+          <h3 style={{ color: "#cccccc" }}>Shipping ₹50</h3>
+          <h3>subTotal ₹{totalPrice + 50} </h3>
+          <br />
           <div>
             <button className="place-order-button">Place Order</button>
           </div>
         </div>
-          <div className="div-button">
-            <button className="place-order-button">Place Order</button>
-          </div>
       </div>
+        <div className="div-button">
+          <button className="place-order-button">Place Order</button>
+        </div>
     </div>
   );
 };
