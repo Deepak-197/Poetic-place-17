@@ -5,7 +5,6 @@ import SingleCart from "../singleCart/SingleCart";
 
 const AddToCart = () => {
   const [data, setData] = useState([]);
-  const [total, setTotal] = useState(0);
 
   const getData = () => {
     axios
@@ -43,7 +42,7 @@ const AddToCart = () => {
         <div className="right-bar">
           <h3>SubTotal:₹{totalPrice + 50}</h3>
           <div>
-            <button className="place-order-button">Place Order</button>
+            <button className="place-order-button" onClick={()=>{alert('Order Has been Placed')}}>Place Order</button>
           </div>
         </div>
       </div>
@@ -81,12 +80,12 @@ const AddToCart = () => {
           <h3>subTotal ₹{totalPrice + 50} </h3>
           <br />
           <div>
-            <button className="place-order-button">Place Order</button>
+            <button className="place-order-button" onClick={()=>{alert('Order Has been Placed')}}>Place Order</button>
           </div>
         </div>
       </div>
         <div className="div-button">
-          <button className="place-order-button">Place Order</button>
+          <button className="place-order-button" onClick={()=>{alert('Order Has been Placed')}}>Place Order</button>
         </div>
     </div>
   );
