@@ -75,12 +75,18 @@ const AddToCart = () => {
         <h3> Prince Patel </h3>
         Bhavnagar,Gujarat
         </div>
-        <div>
+        <div className="price-details">
           <h3>Price Details</h3> <br />
-          Price  ₹{totalPrice} <br />
-          Shipping ₹50 <br />
-          subTotal  ₹{totalPrice+50} <br />
+          <h3 style={{color:"#cccccc"}}>Price  ₹{totalPrice}</h3> 
+          <h3 style={{color:"#cccccc"}}>Shipping ₹50</h3> 
+          <h3>subTotal  ₹{totalPrice+50} </h3><br />
+          <div>
+            <button className="place-order-button">Place Order</button>
+          </div>
         </div>
+          <div className="div-button">
+            <button className="place-order-button">Place Order</button>
+          </div>
       </div>
     </div>
   );

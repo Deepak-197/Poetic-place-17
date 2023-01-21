@@ -35,5 +35,39 @@
 }
 .bottom-details{
 display: flex;
-justify-content: space-around;
+justify-content: space-between;
+margin: 50px 10px;
+}
+.address-details{
+    text-align: left;
+}
+.price-details{
+    text-align: end;
+}
+@media screen and (min-width: 320px) and (max-width:750px){
+    .data-header{
+        display:none
+    }
+    .right-bar .place-order-button{
+        display: none;
+    }
+    .address-details{
+        display: none;
+    }
+    .price-details{
+        display: flex;
+        justify-content: space-around;
+
+    }
+    .bottom-details .place-order-button{
+            display: none;
+
+    }
+    .bottom-details ~ .div-button{
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 80%;
+    }
+
 }
