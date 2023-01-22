@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@114.7,601&family=Frank+Ruhl+Libre&family=Manrope:wght@200;300&display=swap');
+
+
+*{
+    font-family: 'Manrope', sans-serif;
+}
+
+.adminnav{
+    height: 55px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+
+}
+.adminnavigate{
+    width: 30%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+}
+
+.adminbody{
+    width: 100%;
+    margin: auto;
+    margin-top: 55PX;
+    display: flex;
+    
+}
+.categorypanel{
+    width: 20%;
+    height:700px;
+    background-color: #9027354a;
+    
+}
+.categorypanel > div{
+    background-color: #7e222e;
+    height: 50px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(255, 255, 255);
+    margin-top: 20px;
+    border-radius: 8px;
+    color: #fff;
+    font:20px bold;
+}
+.adminlogo{
+    width: 33.33%;
+    height: 50px;
+    
+}
+.logo{
+    height: 100%;
+}
+
+.adheading{
+    width: 33.33%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.adheading > h1{
+    font-size: 1rem ;
+    font-weight: 600;
+}
+
+
+
+
+.rmcatbodubj{
+    width: 80%;
+    height:700px;
+    overflow: auto;
+    background-color: rgb(255, 255, 255);
+}
+.foterofadsfg{
+    height: 50px;
+    
+    width: 100%;
+    background-color: rgba(0, 174, 255, 0.507);
+  
+    
+}

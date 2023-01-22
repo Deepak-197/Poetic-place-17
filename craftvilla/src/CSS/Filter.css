@@ -1,0 +1,32 @@
+#idk{
+    width: 60%;
+    /* border: 1px solid red; */
+    margin: auto;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+}
+span{
+    border-bottom: 1px solid grey;
+    padding: 15px 0px 8px 0px;
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    cursor: pointer;
+}
+span:hover{
+    color: #902735;
+}
+small{
+    color: #902735;
+}
+button{
+    float: right;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+#child{
+    display: none;
+}

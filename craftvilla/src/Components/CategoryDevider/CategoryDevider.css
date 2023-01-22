@@ -1,0 +1,11 @@
+.category-devider{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.category-devider > h3{
+    font-family: monospace;
+    font-size: 28px;
+}
