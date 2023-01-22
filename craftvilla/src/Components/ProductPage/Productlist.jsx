@@ -9,21 +9,16 @@ import '../../CSS/product.css'
 
 export const ProductsList = () => {
   const dispatch = useDispatch();
-  const products = useSelector((store) => store.products);
+  const products = useSelector((store) => store.home_decor);
   const [page, setPage]=useState(1);
   const location = useLocation();
   const [searchParams] = useSearchParams();
 
-useEffect(() =>{
-  const order = searchParams.get("order");
-  let paramObj = {
-    params: {
-      _sort: order && "price",
-      _order: order, 
-    },
-  };
-  dispatch(getProducts(paramObj));
-}, [location.search]);
+useEffect(()=>{
+  if(products.length===0){
+    dispatch(getProducts({page}))
+  }
+}, [page]);
 
   return(
     <>
@@ -33,8 +28,6 @@ useEffect(() =>{
         })}
     </div>
     <Pagination current={page} onChange={page=>setPage(page)} />
-  </>
-  );
+  </>
+  );
 };
-
-
