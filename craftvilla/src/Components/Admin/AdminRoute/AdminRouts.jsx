@@ -11,7 +11,7 @@ export const AdminRoute = () => {
     <>
     <div className='adminnav'>
          <div className='adminlogo'> 
-          {/* <img src='https://www.craftsvilla.com/' alt="logo" className='logo'/> */}
+          {/* <img src={weblogo} alt="logo" className='logo'/> */}
          
          </div>
          <div className='adheading'>
@@ -37,7 +37,7 @@ export const AdminRoute = () => {
             <Outlet/>
             </div>
         </div>
-    
+    <div className='foterofadsfg'></div>
     </>
   )
 }

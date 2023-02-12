@@ -1,0 +1,52 @@
+#parent{
+    display: grid;
+    margin:auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+    /* grid-gap: 10px; */
+    font-family: "Merriweather";
+}
+
+
+#parent>div>h2{
+    /* font-weight: 600; */
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   font-size: 18px;
+}
+#buy{
+    cursor: pointer;
+    width: 240px;
+    height: 40px;
+    background-color: #902735;
+    font-size: 14px;
+    overflow: clip;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin-top: -20px;
+
+}
+#parent>div>p{
+    color: goldenrod;
+    font-weight: 700;
+    font-size: 22px;
+    margin-top: -10px;
+}
+
+#parent>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+#parent>div>img{
+    width: 250px;
+    height: 237px;
+}
+.btn{
+    background-color: #902735;
+    padding: 10px;
+    border-radius: 2px;
+    margin: 5px;
+    color: white;
+    
+}

@@ -25,6 +25,11 @@ const ondeletitem=(id,param)=>{
     }).catch((e)=>{
         console.log(e)
     }).then( getData(param))
+ 
+
+    
+
+
 }
 
   return (
@@ -55,6 +60,7 @@ const ondeletitem=(id,param)=>{
         {
           data.length>0&&data.map((item)=>{
             return <SingleProduct key={item.id} item={item} onDelet={()=>ondeletitem(item.id,param)}/>
+            // return <singleProduct/>
           })
         }
       </div>

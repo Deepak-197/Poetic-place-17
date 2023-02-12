@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./AddProduct.css";
+// import { button, ButtonGroup, Box, Select } from "@chakra-ui/react";
 import { AiFillEdit } from "react-icons/ai";
 import axios from "axios";
 export const AddProduct = () => {
@@ -7,6 +8,7 @@ export const AddProduct = () => {
     title: "",
     image: "",
     price:"",
+
     qty: "",
   });
   const [cate, setCate] = useState("");
@@ -19,13 +21,20 @@ return axios.post(`http://localhost:8080/${cate}`,state).then((r)=>alert("Produc
   price: "",
   qty: "",
 }))
+
+
 }
+
+
+
+
 
   return (
     <>
       <div className="Heading">
         <button >Add Products To Server</button>
       </div>
+
       <div className="container  form-body">
         <input
           type="text"

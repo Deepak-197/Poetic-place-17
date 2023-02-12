@@ -19,7 +19,10 @@ import { useNavigate } from "react-router-dom";
                   <h1>{item.title}</h1>
                   <h2>{"Rs" +item.price+""}</h2>
               <div>
-                  <div className="delete-product" onClick={onDelet}>Delete <AiFillDelete/>
+                  <div onClick={()=>navigate(`edit/${item.id}`)}>
+                    edit <AiOutlineExport/>
+                  </div>
+                  <div onClick={onDelet}>Delete <AiFillDelete/>
                   </div>
               </div>
         </div>
