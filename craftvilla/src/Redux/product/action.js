@@ -33,6 +33,7 @@ return  axios.get(`http://localhost:8080/products?page=${page}&_limit=${limit}`,
       });
 };
 
+
 export const editProduct = (id, ProductData) => (dispatch) => {
   return axios.patch(`http://localhost:8080/products/${id}`, ProductData).then(() => {
     dispatch(editProductSuccess());
