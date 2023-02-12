@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar-heading{
+    color: brown;
+}
+.top-bar{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+.right-bar{
+    display: flex;
+    gap: 40px;
+}
+.place-order-button{
+    background-color: brown;
+    color: white;
+    border: 0px;
+    font-size: medium;
+    padding: 10px 75px;
+    font-weight: bold;
+}
+.place-order-button:hover{
+    cursor: pointer;
+}
+.data-header{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    color: #cccccc;
+    
+}
