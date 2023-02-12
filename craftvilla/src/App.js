@@ -1,9 +1,22 @@
 import './App.css';
-import AddToCart from './Components/Add to cart/AddToCart'
+
+import { AddProduct } from './Components/Admin/AddProduct/AddProduct';
+import { Dashboard } from './Components/Admin/DashBoard/Dashboard';
+import { AdminRoute } from './Components/Admin/AdminRoute/AdminRouts';
+import { AdminPageRoute } from './Components/AdminPageRoute';
+import { Order } from './Components/Admin/Order/Order';
+
 function App() {
   return (
     <div className="App">
-      <AddToCart/>
+      <> 
+      {/* <Order/> */}
+      <AdminPageRoute/> 
+      {/* <AdminRoute/> */}
+      {/* <AddProduct/> */}
+      {/* <Dashboard/> */}
+      </>
+
     </div>
   );
 }
