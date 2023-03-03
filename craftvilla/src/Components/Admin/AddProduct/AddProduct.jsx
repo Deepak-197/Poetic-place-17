@@ -15,7 +15,7 @@ export const AddProduct = () => {
 
 const submitData=()=>{
 
-return axios.post(`http://localhost:8080/${cate}`,state).then((r)=>alert("Product Added To Server...")).catch((e)=>console.log(e)).then((q)=>setState({
+return axios.post(`https://craftvilla-mock-server.onrender.com/${cate}`,state).then((r)=>alert("Product Added To Server...")).catch((e)=>console.log(e)).then((q)=>setState({
   title: "",
   image: "",
   price: "",
