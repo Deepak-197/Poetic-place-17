@@ -40,7 +40,7 @@ const SingleCart = ({ image, name, price,id, handleRemoval,getData }) => {
 
   
   const addCount=()=>{
-    axios.patch(`http://localhost:8080/cart/${id}`,{"count":count}).then(()=>getData())
+    axios.patch(`https://craftvilla-mock-server.onrender.com/cart/${id}`,{"count":count}).then(()=>getData())
   }
 
   useEffect(() => {

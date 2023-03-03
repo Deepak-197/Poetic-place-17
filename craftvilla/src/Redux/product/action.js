@@ -18,15 +18,15 @@ const getProductsFailureAction = () => {
   return { type: GET_PRODUCTS_FAILURE };
 };
 
-const editProductSuccess = () => {
-  return { type: EDIT_PRODUCT_SUCCESS };
-};
+// const editProductSuccess = () => {
+//   return { type: EDIT_PRODUCT_SUCCESS };
+// };
 
-export const getProducts=(page=1,limit=40,param = {})=>(dispatch) => {
+export const getProducts=()=>(dispatch) => {
     dispatch(getProductsRequestAction());
 
-return  axios.get(`http://localhost:8080/products?page=${page}&_limit=${limit}`,param).then((res) => {
-        dispatch(getProductsSuccessAction(res.data));
+return  axios.get('https://craftvilla-mock-server.onrender.com/home_decor').then((res) => {
+        dispatch(getProductsSuccessAction(res));
       })
       .catch((err)=>{
         dispatch(getProductsFailureAction());
@@ -34,8 +34,8 @@ return  axios.get(`http://localhost:8080/products?page=${page}&_limit=${limit}`,
 };
 
 
-export const editProduct = (id, ProductData) => (dispatch) => {
-  return axios.patch(`http://localhost:8080/products/${id}`, ProductData).then(() => {
-    dispatch(editProductSuccess());
-  });
-};
+// export const editProduct = (id, ProductData) => (dispatch) => {
+//   return axios.patch(`http://localhost:8080/products/${id}`, ProductData).then(() => {
+//     dispatch(editProductSuccess());
+//   });
+// };

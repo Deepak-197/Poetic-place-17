@@ -6,7 +6,7 @@ import {
   } from "./actionType";
   
   const initialState = {
-    products: [],
+    home_decor: [],
     isLoading: false,
     isError: false,
     current: 1,
@@ -17,7 +17,7 @@ import {
       case GET_PRODUCTS_REQUEST:
         return { ...state, isLoading: true };
       case GET_PRODUCTS_SUCCESS:
-        return { ...state, isLoading: false, products: payload };
+        return { ...state, isLoading: false, home_decor: payload };
       case GET_PRODUCTS_FAILURE:
         return { ...state, isLoading: false, isError: true };
       case EDIT_PRODUCT_SUCCESS:

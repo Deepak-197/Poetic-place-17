@@ -10,24 +10,26 @@ import '../../CSS/product.css'
 export const ProductsList = () => {
   const dispatch = useDispatch();
   const products = useSelector((store) => store.home_decor);
-  const [page, setPage]=useState(1);
-  const location = useLocation();
-  const [searchParams] = useSearchParams();
+  // const [page, setPage]=useState(1);
+  // const location = useLocation();
+  // const [searchParams] = useSearchParams();
+
+console.log(products,"444");
 
 useEffect(()=>{
-  if(products.length===0){
-    dispatch(getProducts({page}))
-  }
-}, [page]);
+    dispatch(getProducts);
+}, []);
 
   return(
     <>
     <div id="parent">
-      { products.length > 0 && products.map((el) => {
+      { products && products.length > 0 ? products.map((el) => {
           return <ProductCard key={el.id} {...el} />;
-        })}
+        }):<div>
+          <h1>Loading...</h1>
+          </div>}
     </div>
-    <Pagination current={page} onChange={page=>setPage(page)} />
+    {/* <Pagination current={page} onChange={page=>setPage(page)} /> */}
   </>
   );
 };

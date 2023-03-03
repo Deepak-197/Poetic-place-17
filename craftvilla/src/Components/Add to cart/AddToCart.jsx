@@ -8,7 +8,7 @@ const AddToCart = () => {
 
   const getData = () => {
     axios
-      .get("http://localhost:8080/cart")
+      .get("https://craftvilla-mock-server.onrender.com/cart")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   };

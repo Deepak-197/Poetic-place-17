@@ -8,7 +8,7 @@ export const Dashboard = () => {
 const [data,setData]=useState([]);
 const [param,setParam]=useState("home_decor")
 const getData=(param)=>{
-  return  axios.get(`http://localhost:8080/${param}`)
+  return  axios.get(`https://craftvilla-mock-server.onrender.com/${param}`)
   .then((r)=>setData(r.data)).catch((e)=>console.log(e))
  }
 useEffect(()=>{
