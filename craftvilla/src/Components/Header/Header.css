@@ -4,38 +4,19 @@
 
 .Header{
     width: 100%;
-    height:80px;
-    background-color: brown;
-    
-}
-
-.Header-child {
-    width: 23%;
-    height: 100%;
-    color: white;
     display: flex;
-    justify-content: space-between;
-    margin: auto;
-
+    gap: 20px   ;
+    justify-content: center;
+    color: white;
+    background-color: brown;
+    padding: 10px 0px;
+    text-decoration: none;
 }
-
-.Header-child > div {
-   width: auto;
-   height: auto;
-   /* border: 1px solid green; */
-   font-size: xx-large;
-   padding: 0px 2px 0px 2px;
+.headers-child{
+    font-weight: bold;
+    text-decoration: none;
 }
-
-
-h3{
-
-    font-size: 22px;
-    padding: 1px;
-}
-
-.Header-child > div :hover {
-    /* height: 100%; */
-    color:brown;
-    background-color: aliceblue;
+.Header .headers-child:hover {
+    cursor: pointer;
+    color:rgb(14, 11, 11);
 } 

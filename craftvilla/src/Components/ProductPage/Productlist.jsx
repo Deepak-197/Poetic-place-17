@@ -9,7 +9,7 @@ import '../../CSS/product.css'
 
 export const ProductsList = () => {
   const dispatch = useDispatch();
-  const products = useSelector((store) => store.home_decor);
+  const products = useSelector((store) => store.home_decor.home_decor);
   // const [page, setPage]=useState(1);
   // const location = useLocation();
   // const [searchParams] = useSearchParams();
@@ -17,7 +17,7 @@ export const ProductsList = () => {
 console.log(products,"444");
 
 useEffect(()=>{
-    dispatch(getProducts);
+    dispatch(getProducts());
 }, []);
 
   return(
