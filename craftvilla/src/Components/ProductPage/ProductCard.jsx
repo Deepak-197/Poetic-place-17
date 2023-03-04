@@ -1,17 +1,12 @@
 import React from "react";
+import "./ProductCard.css"
 
 export const ProductCard = ({ image,name,price,buy }) => {
   return (
-    <div style={{
-      padding:"10px",
-      height:"355px",
-      width:"250px",
-      cursor:"pointer",
-      padding: "15px",
-    }}>
-      <img src={image} alt="Image"/>
+    <div className="Card" >
+      <img src={image} alt=""/>
       <h2>{name}</h2>
-      <p> ₹ {price}</p>
+      <p className="price-card"> ₹ {price}</p>
       <button id="buy">{buy}</button>
     </div>
   );
