@@ -1,15 +1,16 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import "./SingleCart.css";
-const SingleCart = ({ image, name, price,id, handleRemoval,getData }) => {
+const SingleCart = ({ image, name, price, id, handleRemoval, getData }) => {
   const [count, setCount] = useState(1);
   if (count === 0) {
     handleRemoval();
   }
 
   /*calculate proce */
-  price = price.trim().split(" ");
+  // price = price.trim().split(" ");
   price = +price;
   const [Price, setPrice] = useState(price);
   /*set date of delivery */
@@ -38,14 +39,17 @@ const SingleCart = ({ image, name, price,id, handleRemoval,getData }) => {
     months[current.getMonth() + 1]
   } ${current.getFullYear()} `;
 
-  
-  // const addCount=()=>{
-  //   axios.patch(`https://craftvilla-mock-server.onrender.com/cart/${id}`,{"count":count}).then(()=>getData())
-  // }
+  const addCount = () => {
+    axios
+      .patch(`https://craftvilla-mock-server2.onrender.com/cart/${id}`, {
+        qty: count,
+      })
+      .then(() => getData());
+  };
 
   useEffect(() => {
     setPrice(price * count);
-    // addCount()
+    addCount()
   }, [count]);
   return (
     <div className="cart-details">
@@ -65,13 +69,13 @@ const SingleCart = ({ image, name, price,id, handleRemoval,getData }) => {
             onClick={() => setCount((prev) => prev - 1)}
             disabled={count === 0}
           >
-            <FaMinus/>
+            <FaMinus />
           </button>
         </div>
         <p>{count}</p>
         <div>
           <button className="add" onClick={() => setCount((prev) => prev + 1)}>
-            <FaPlus/>
+            <FaPlus />
           </button>
         </div>
       </div>
