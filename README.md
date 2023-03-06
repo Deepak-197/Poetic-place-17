@@ -1,6 +1,6 @@
 # Poetic-place-17 (Craftvilla Clone)
 
-# Netlify Deployment : https://moonlit-caramel-a471b3.netlify.app/
+# Vercel Deployment : https://apna-adda.vercel.app/
 
 ## INTRODUCTION :
 
@@ -10,7 +10,7 @@ Hello Everyone, We have build a clone of Craftvilla. Currently, we are pursuing 
 ![App Screenshot](![WhatsApp Image 2023-01-17 at 17 21 17](https://user-images.githubusercontent.com/104504771/218248759-5f88b136-93e2-48ba-b347-8b2ea2bbb889.jpg)
 )
 
-> • Deployed Link - [Craftvilla] https://github.com/Deepak-197/Poetic-place-17)
+> • Deployed Link - [Craftvilla] https://apna-adda.vercel.app/)
 
 *System display size 💻 = 1024 to 1680 pixels*
 <br>
