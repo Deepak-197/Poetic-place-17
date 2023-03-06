@@ -2,35 +2,47 @@ import React, { useEffect, useState } from "react";
 import "./AddToCart.css";
 import axios from "axios";
 import SingleCart from "../singleCart/SingleCart";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const AddToCart = () => {
   const [data, setData] = useState([]);
+  const navigate=useNavigate()
+  const getData = async() => {
 
-  const getData = () => {
-    axios
-      .get("https://craftvilla-mock-server.onrender.com/cart")
-      .then((res) => setData(res.data))
-      .catch((err) => console.log(err));
+    // axios
+    //   .get("https://craftvilla-clone-server.onrender.com/data")
+    //   .then((res) => setData(res.data.cart))
+    //   .catch((err) => console.log(err));
+
+    try {
+      let res=await axios.get("https://craftvilla-clone-server.onrender.com/data")
+       await setData(res.data.cart)
+    } catch (error) {
+      console.log(error);
+    }
+
+    
   };
-  const handleRemoval = (id) => {
-    axios
-      .delete(`http://localhost:8080/cart/${id}`)
-      .then(() => getData())
-      .then((res) => setData(res.data));
-  };
+  // const handleRemoval = (id) => {
+  //   axios
+  //     .delete(`https://craftvilla-clone-server.onrender.com/data/cart/${id}`)
+  //     .then(() => getData())
+  //     .then((res) => setData(res));
+  // };
 
   let totalPrice = data.reduce((initial, e) => {
-    let { price, count } = e;
+    let { price, qty } = e;
 
-    price = Number(price.trim().split(" ")[1]);
+    price = Number(price);
 
-    initial = initial + price * count;
+    initial = initial + price * Number(qty);
 
     return initial;
   }, 0);
 
   useEffect(() => {
     getData();
+    //console.log(data);
   }, []);
   return (
     <div>
@@ -60,7 +72,7 @@ const AddToCart = () => {
             <SingleCart
               key={e.id}
               {...e}
-              handleRemoval={() => handleRemoval(e.id)}
+              // handleRemoval={() => handleRemoval(e.id)}
               getData={getData}
             />
           </>
@@ -75,12 +87,14 @@ const AddToCart = () => {
         </div>
         <div className="price-details">
           <h3>Price Details</h3> <br />
-          <h3 style={{ color: "#cccccc" }}>Price ₹{totalPrice}</h3>
+          <h3 style={{ color: "#cccccc" }}>Price ₹{(totalPrice)}</h3>
           <h3 style={{ color: "#cccccc" }}>Shipping ₹50</h3>
           <h3>subTotal ₹{totalPrice + 50} </h3>
           <br />
           <div>
-            <button className="place-order-button" onClick={()=>{alert('Order Has been Placed')}}>Place Order</button>
+            <button className="place-order-button" onClick={()=>{alert('Order Has been Placed')
+          navigate("/")
+          }}>Place Order</button>
           </div>
         </div>
       </div>

@@ -57,14 +57,18 @@ export const Navbar = () => {
                 Sign in/Register
               </Button>
               </Link>
+              <Link to="/addtocart">
               <Button variant="ghost">
                 <AiOutlineHeart size={"20px"} className="heart-icon" />
                 Wishlist
               </Button>
+              </Link>
+              <Link to="/addtocart">
               <Button variant="ghost">
                 <ImCart className="cart-icon" />
                 Cart
               </Button>
+              </Link>
             </HStack>
             <Button colorScheme="brand" size="sm">
               Get Started

@@ -1,6 +1,6 @@
 # Poetic-place-17 (Craftvilla Clone)
 
-# Netlify Deployment : https://moonlit-caramel-a471b3.netlify.app/
+# Netlify Deployment : https://apna-adda.vercel.app/
 
 ## INTRODUCTION :
 

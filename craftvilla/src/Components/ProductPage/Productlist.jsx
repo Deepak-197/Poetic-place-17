@@ -25,8 +25,8 @@ useEffect(()=>{
     <div id="parent">
       { products && products.length > 0 ? products.map((el) => {
           return <ProductCard key={el.id} {...el} />;
-        }):<div>
-          <h1>Loading...</h1>
+        }):<div >
+          <img  style={{marginLeft:"300px",marginTop:"150px"}} src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="" />
           </div>}
     </div>
     {/* <Pagination current={page} onChange={page=>setPage(page)} /> */}
