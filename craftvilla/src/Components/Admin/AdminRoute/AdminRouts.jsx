@@ -24,13 +24,13 @@ export const AdminRoute = () => {
     <div className='adminbody'>
         <div className='categorypanel'>
             <div>
-                <Link to="dashboard" >Dashboard</Link>
+                <Link to="/dashboard" >Dashboard</Link>
             </div>
             <div>
-                <Link to="addproduct">Add Product</Link>
+                <Link to="/addproduct">Add Product</Link>
             </div> 
             <div>
-                <Link to="orders">Orders</Link>
+                <Link to="/orders">Orders</Link>
             </div>
             </div>
             <div className='rmcatbodubj'>
