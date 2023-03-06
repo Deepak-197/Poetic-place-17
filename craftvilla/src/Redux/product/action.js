@@ -25,8 +25,8 @@ const getProductsFailureAction = () => {
 export const getProducts=()=>(dispatch) => {
     dispatch(getProductsRequestAction());
 
-return  axios.get(`https://craftvilla-clone-server.onrender.com/data`).then((res) => {
-        dispatch(getProductsSuccessAction(res.data.home_decor));
+return  axios.get(`https://craftvilla-mock-server2.onrender.com/home_decor`).then((res) => {
+        dispatch(getProductsSuccessAction(res.data));
       })
       .catch((err)=>{
         dispatch(getProductsFailureAction());

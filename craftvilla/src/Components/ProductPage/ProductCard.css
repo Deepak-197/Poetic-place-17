@@ -1,6 +1,6 @@
 .Card{
     padding:10px;
-    height:355px;
+    /* height:355px; */
     width:250px;
     cursor:pointer;
     padding: 15px;
@@ -8,4 +8,18 @@
 .price-card{
     margin-top: 20px;
     margin-bottom: 15px;
+}
+.buy{
+    background-color: brown;
+    padding: 5px 15px;
+    color:white;
+    display: block;
+    margin-right: 50px;
+    border-radius: 15px;
+    /* margin-bottom: 10px; */
+}
+
+.buy:hover{
+    transform: scale(1.1);
+     
 }
