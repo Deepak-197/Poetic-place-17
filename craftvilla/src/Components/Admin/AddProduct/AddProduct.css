@@ -23,8 +23,6 @@
     width: 35vw;
     height: 100vh;
     margin-top: 50px;
-    /* min-height: 1005; */
-    /* background-color: black; */
     display: inline-block;
 }
 .container > input {

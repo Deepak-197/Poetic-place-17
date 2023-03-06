@@ -10,7 +10,7 @@ const SingleCart = ({ image, name, price, id, handleRemoval, getData }) => {
   }
 
   /*calculate proce */
-  // price = price.trim().split(" ");
+ 
   price = +price;
   const [Price, setPrice] = useState(price);
   /*set date of delivery */

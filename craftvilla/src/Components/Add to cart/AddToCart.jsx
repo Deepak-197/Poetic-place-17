@@ -10,10 +10,6 @@ const AddToCart = () => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
   const getData = async () => {
-    // axios
-    //   .get("https://craftvilla-clone-server.onrender.com/data")
-    //   .then((res) => setData(res.data.cart))
-    //   .catch((err) => console.log(err));
 
     try {
       let res = await axios.get(
