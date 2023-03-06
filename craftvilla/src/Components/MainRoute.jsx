@@ -5,6 +5,7 @@ import ProductPage from '../Pages/ProductPage';
 import SignIn from '../Pages/SignIn';
 import SignUp from '../Pages/SignUp';
 import AddToCart from './Add to cart/AddToCart';
+import EmptyCart from './Add to cart/EmptyCart';
 import { AddProduct } from './Admin/AddProduct/AddProduct';
 import { AdminRoute } from './Admin/AdminRoute/AdminRouts';
 import { Dashboard } from './Admin/DashBoard/Dashboard';
@@ -22,7 +23,7 @@ export const MainRoute = () => {
         {/* <Route path='/Admin' element={<AdminRoute/>} />
         <Route path ='/dashboard' element={<Dashboard/>}/>
         <Route path="/addproduct" element={<AddProduct/>}/> */}
-        <Route path="/addtocart" element={<AddToCart/>}/>
+        <Route path="/addtocart" element={<EmptyCart/>}/>
         <Route path="/admin" element={<AdminRoute />}>
         <Route index element={<Dashboard />} />
         <Route path="dashboard" element={<Dashboard />} />
