@@ -90,7 +90,7 @@ useEffect(()=>{
      <div className="sort-main-div"   >
       <p>Sort By: Popular |</p>
       <div onChange={handleSort} className="sort-price-div">
-        <input type="radio" name='order' value='asc' />
+        <input type="radio" name='order' checked value='asc' />
         <label>Price low to High</label>
         <br/>
         <input type="radio" name='order' value='desc' />
