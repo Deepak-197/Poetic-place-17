@@ -1,10 +1,18 @@
 .Card{
     padding:10px;
     /* height:355px; */
-    width:250px;
+    width:300px;
+    
     cursor:pointer;
     padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+img{
+    justify-content: center;
+    margin-left: 10px;
+}
+
 .price-card{
     margin-top: 20px;
     margin-bottom: 15px;
@@ -14,11 +22,21 @@
     padding: 5px 15px;
     color:white;
     display: block;
-    margin-right: 50px;
+    margin-right: 30%;
     border-radius: 15px;
 }
 
 .buy:hover{
     transform: scale(1.1);
-     
+     color: black;
+}
+
+@media screen and (max-width:750px) {
+
+    .Card{
+        width: 250px;
+    }
+    .buy{
+        margin-right: 25%;
+    }
 }

@@ -43,6 +43,7 @@ export const Footer = () => {
               base: "235px",
               lg: "235px",
             }}
+            textAlign="left"
             // height={{
             //   base: "75px",
             //   lg: "100px",

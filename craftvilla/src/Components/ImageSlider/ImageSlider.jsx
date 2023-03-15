@@ -12,12 +12,14 @@ export const ImageSlider=()=>{
     infinite: true,
     centerPadding: "60px",
     slidesToShow: 3,
-    speed: 500
+    speed: 500,
+    
+
   };
   return (
-    <div>
+    <div style={{width:"97vw"}} >
     
-    <Slider {...settings}>
+    <Slider {...settings} >
       <div>
         <img src={"https://cdn.plotch.io/image/upload/C/V/1671109983_Mi5wbmc=.png"} alt="" />
       </div>
