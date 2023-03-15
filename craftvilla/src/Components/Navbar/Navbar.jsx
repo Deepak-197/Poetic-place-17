@@ -4,6 +4,7 @@ import logo from "../../images/logo.png";
 import {
   Box,
   Button,
+  CloseButton,
   Flex,
   HStack,
   IconButton,
@@ -17,7 +18,7 @@ import { chakra } from "@chakra-ui/react";
 import { AiOutlineHeart, AiOutlineMenu } from "react-icons/ai";
 import { FaUserAlt } from "react-icons/fa";
 import { ImCart } from "react-icons/im";
-import { CloseButton } from "react-bootstrap";
+//import { CloseButton } from "react-bootstrap";
 
 export const Navbar = () => {
   const bg = useColorModeValue("white", "gray.800");

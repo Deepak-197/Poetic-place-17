@@ -1,6 +1,9 @@
-import React from 'react'
+import { Box } from '@chakra-ui/react'
+import React, { useState } from 'react'
 import '../../CSS/Filter.css'
 export default function Filter() {
+  let [arr,setArr]=useState([])
+  let [minprice,setMinprice]=useState()
   const toggleVisibility=()=>{
     let element = document.getElementById('child');
     if(element.style.display === "none") {
@@ -9,8 +12,14 @@ export default function Filter() {
       element.style.display = "none";
     }
   }
+  const handleFilter=(e)=>{
+setArr(e.target.value)
+console.log((arr).split("-"));
+  }
 
   return (
+    <Box>
+
     <div style={{
       // border:"1px solid grey",
       marginTop:'20px',
@@ -20,22 +29,23 @@ export default function Filter() {
         <small>Home/ </small>
         <h3>Filter by</h3>
         <span>Price <button onClick={toggleVisibility}>▽</button>
-        <div id='child' >
+        <div id='child' onChange={handleFilter} >
           <li>
-           <p><input type="checkbox" />1000-2000(588)</p>
-           <p><input type="checkbox" />2000-5000(638)</p>
-           <p><input type="checkbox" />5000-10000(357)</p>
+           <p><input type="radio" name="filter" value={"1000-2000"} />₹1000-₹2000</p>
+           <p><input type="radio" name="filter" value={"500-1000"} />₹500-₹1000</p>
+           <p><input type="radio" name="filter" value={"100-1000"} />₹100-₹500</p>
           </li>
         </div>
         </span>
-        <span>Discount <button>▽</button></span>
+        {/* <span>Discount <button>▽</button></span>
         <span>Category <button>▽</button></span>
         <span>Time to Ship <button>▽</button></span>
         <span>Returnable <button>▽</button></span>
         <span>cancellable <button>▽</button></span>
-        <span>Store Name <button>▽</button></span>
+        <span>Store Name <button>▽</button></span> */}
         </div>
       </div>
     </div>
+        </Box>
   )
 }

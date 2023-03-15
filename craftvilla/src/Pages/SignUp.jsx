@@ -94,17 +94,12 @@ const SignUp = () => {
 
   return (
 
-    <Box height="110vh" bg="#ffffff">
+<Box >
       <Divider orientation="horizontal" />
-      <Box
-        width="1150px"
-        position="center"
-        margin="auto"
-        padding="20px 0px 80px 0px"
-        height="900px"
+      <Box maxW="1150px" mx="auto" px="2" py="10"
       >
-        <Box width="20%" textAlign="left">
-          <Breadcrumb fontWeight="light" fontSize="sm">
+        <Box  textAlign={{ base: "center", md: "left" }} mb={{ base: 4, md: 10 }}>
+          <Breadcrumb fontWeight="light" fontSize="sm" >
             <BreadcrumbItem>
               <BreadcrumbLink href="/">Home</BreadcrumbLink>
             </BreadcrumbItem>
@@ -113,13 +108,14 @@ const SignUp = () => {
             </BreadcrumbItem>
           </Breadcrumb>
         </Box>
-        <Box width="100%" padding="20px 0px 20px">
+
+        <Box px={["2", "0"]} >
           <Heading as="h3" size="lg" fontWeight="medium" textAlign="center">
             Sign Up
           </Heading>
         </Box>
         <Divider orientation="horizontal" />
-        <Box width="50%" margin="0 auto" padding="50px 0px 0px 0px">
+        <Box  mx="auto" maxW="md" py="6">
           <Stack spacing={4}>
             <Box background="none" color="none">
               <FormControl isRequired>
@@ -129,7 +125,6 @@ const SignUp = () => {
                   errorBorderColor="red.300"
                   type="text"
                   size="lg"
-                  borderRadius="0px"
                   value={state.name}
                   onChange={(e) =>
                     setter({ type: "name", payload: e.target.value })
@@ -149,31 +144,19 @@ const SignUp = () => {
                     setter({ type: "email", payload: e.target.value })
                   }
                   size="lg"
-                  borderRadius="0px"
+                  
                 />
               </FormControl>
             </Box>
-            <Box>
-              <FormControl isRequired>
-                <FormLabel fontWeight="hairline">Phone</FormLabel>
-                <Input
-                  focusBorderColor="black"
-                  errorBorderColor="red.300"
-                  type="number"
-                  value={state.mobile}
-                  onChange={(e) =>
-                    setter({ type: "phone", payload: e.target.value })
-                  }
-                  size="lg"
-                  borderRadius="0px"
-                />
-              </FormControl>
-            </Box>
+        
             <Box>
               <FormControl isRequired>
                 <FormLabel fontWeight="hairline">Password</FormLabel>
                 <InputGroup>
                 <Input
+                 size="lg"
+                    focusBorderColor="black"
+                    errorBorderColor="red.300"
                   type={showPassword ? "text" : "password"}
                   value={state.password}
                   onChange={(e) =>
@@ -194,31 +177,166 @@ const SignUp = () => {
               </FormControl>
             </Box>
           </Stack>
-          <Box paddingTop="26px">
+          <Box mt="6" textAlign="center" >
             Already a user?{" "}
-            <Link color="teal.500" href="sign-in">
+            <Link  href="sign-in" color="rgb(228,9,128)">
               Login
             </Link>
           </Box>
+          <Box display='flex'
+    alignItems='center'
+    justifyContent='center' >
           <Button
-            borderRadius="0px"
-            width="180px"
-            color="white"
-            onClick={signupHandler}
-            background="#302C26"
-            padding="20px"
-            marginTop="20px"
-            _hover={{
-              color: "#302C26",
-              background: "#ffffff",
-              border: "1px solid black",
-            }}
-          >
+          
+          alignItems='center'
+    justifyContent='center'
+      width="100%"
+      maxWidth="180px"
+      // colorScheme="#E40980"
+      background="#E40980"
+      onClick={signupHandler}
+      padding="12px"
+      mt="20px"
+      color="#fff"
+      fontSize="1.2rem"
+      
+      _hover={{
+        background: "teal.500",
+      }}
+           >
             Sign Up
           </Button>
+          </Box>
+         
         </Box>
       </Box>
     </Box>
+
+    // <Box height="110vh" bg="#ffffff">
+    //   <Divider orientation="horizontal" />
+    //   <Box
+    //     width="1150px"
+    //     position="center"
+    //     margin="auto"
+    //     padding="20px 0px 80px 0px"
+    //     height="900px"
+    //   >
+    //     <Box width="20%" textAlign="left">
+    //       <Breadcrumb fontWeight="light" fontSize="sm">
+    //         <BreadcrumbItem>
+    //           <BreadcrumbLink href="/">Home</BreadcrumbLink>
+    //         </BreadcrumbItem>
+    //         <BreadcrumbItem>
+    //           <BreadcrumbLink href="/sign-up">Sign-Up</BreadcrumbLink>
+    //         </BreadcrumbItem>
+    //       </Breadcrumb>
+    //     </Box>
+    //     <Box width="100%" padding="20px 0px 20px">
+    //       <Heading as="h3" size="lg" fontWeight="medium" textAlign="center">
+    //         Sign Up
+    //       </Heading>
+    //     </Box>
+    //     <Divider orientation="horizontal" />
+    //     <Box width="50%" margin="0 auto" padding="50px 0px 0px 0px">
+    //       <Stack spacing={4}>
+    //         <Box background="none" color="none">
+    //           <FormControl isRequired>
+    //             <FormLabel fontWeight="hairline">Full name</FormLabel>
+    //             <Input
+    //               focusBorderColor="#353535"
+    //               errorBorderColor="red.300"
+    //               type="text"
+    //               size="lg"
+    //               borderRadius="0px"
+    //               value={state.name}
+    //               onChange={(e) =>
+    //                 setter({ type: "name", payload: e.target.value })
+    //               }
+    //             />
+    //           </FormControl>
+    //         </Box>
+    //         <Box>
+    //           <FormControl isRequired>
+    //             <FormLabel fontWeight="hairline">Email address</FormLabel>
+    //             <Input
+    //               focusBorderColor="black"
+    //               errorBorderColor="red.300"
+    //               type="email"
+    //               value={state.email}
+    //               onChange={(e) =>
+    //                 setter({ type: "email", payload: e.target.value })
+    //               }
+    //               size="lg"
+    //               borderRadius="0px"
+    //             />
+    //           </FormControl>
+    //         </Box>
+    //         <Box>
+    //           <FormControl isRequired>
+    //             <FormLabel fontWeight="hairline">Phone</FormLabel>
+    //             <Input
+    //               focusBorderColor="black"
+    //               errorBorderColor="red.300"
+    //               type="number"
+    //               value={state.mobile}
+    //               onChange={(e) =>
+    //                 setter({ type: "phone", payload: e.target.value })
+    //               }
+    //               size="lg"
+    //               borderRadius="0px"
+    //             />
+    //           </FormControl>
+    //         </Box>
+    //         <Box>
+    //           <FormControl isRequired>
+    //             <FormLabel fontWeight="hairline">Password</FormLabel>
+    //             <InputGroup>
+    //             <Input
+    //               type={showPassword ? "text" : "password"}
+    //               value={state.password}
+    //               onChange={(e) =>
+    //                 setter({ type: "password", payload: e.target.value })
+    //               }
+    //             />
+    //             <InputRightElement h={"full"}>
+    //               <Button
+    //                 variant={"ghost"}
+    //                 onClick={() =>
+    //                   setShowPassword((showPassword) => !showPassword)
+    //                 }
+    //               >
+    //                 {showPassword ? <ViewIcon /> : <ViewOffIcon />}
+    //               </Button>
+    //             </InputRightElement>
+    //           </InputGroup>
+    //           </FormControl>
+    //         </Box>
+    //       </Stack>
+    //       <Box paddingTop="26px">
+    //         Already a user?{" "}
+    //         <Link color="teal.500" href="sign-in">
+    //           Login
+    //         </Link>
+    //       </Box>
+    //       <Button
+    //         borderRadius="0px"
+    //         width="180px"
+    //         color="white"
+    //         onClick={signupHandler}
+    //         background="#302C26"
+    //         padding="20px"
+    //         marginTop="20px"
+    //         _hover={{
+    //           color: "#302C26",
+    //           background: "#ffffff",
+    //           border: "1px solid black",
+    //         }}
+    //       >
+    //         Sign Up
+    //       </Button>
+    //     </Box>
+    //   </Box>
+    // </Box>
   );
 };
 
